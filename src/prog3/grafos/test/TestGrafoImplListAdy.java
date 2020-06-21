@@ -4,6 +4,7 @@ package prog3.grafos.test;
 import junit.framework.TestCase;
 import prog3.grafos.*;
 import prog3.grafos.utiles.Algoritmos;
+import prog3.grafos.utiles.GradosDeSeparacion;
 import prog3.grafos.utiles.Mapa;
 import prog3.grafos.utiles.Recorridos;
 import prog3.listagenerica.ListaGenerica;
@@ -384,5 +385,43 @@ public class TestGrafoImplListAdy extends TestCase {
 		assertTrue(algoritmos.subgrafoCuadrado(mapaDirigido));
 		assertEquals(4, algoritmos.getGrado(mapaDirigido));
 		assertTrue(algoritmos.tieneCiclo(mapaDirigido));
+	}
+
+	public void testSeparacion(){
+		Grafo<String> redA = new GrafoImplListAdy<>();
+		Vertice<String> jorge, ariel, juan, matias;
+
+		jorge = new VerticeImplListAdy<>("Jorge");
+		ariel = new VerticeImplListAdy<>("Ariel");
+		juan = new VerticeImplListAdy<>("Juan");
+		matias = new VerticeImplListAdy<>("Matias");
+
+		redA.agregarVertice(jorge);
+		redA.agregarVertice(ariel);
+		redA.agregarVertice(juan);
+		redA.agregarVertice(matias);
+
+		redA.conectar(matias, ariel);
+		redA.conectar(matias, juan);
+		redA.conectar(matias, jorge);
+		redA.conectar(ariel, matias);
+		redA.conectar(ariel, juan);
+		redA.conectar(juan, ariel);
+		redA.conectar(juan, matias);
+		redA.conectar(jorge, matias);
+
+		GradosDeSeparacion gradosDeSeparacion = new GradosDeSeparacion();
+		assertEquals(2, gradosDeSeparacion.maximoGradoDeSeparacion(redA));
+
+		redA.desConectar(jorge, matias);
+		redA.conectar(jorge, juan);
+		redA.desConectar(ariel, juan);
+		redA.desConectar(juan, ariel);
+		redA.conectar(juan, jorge);
+		redA.desConectar(juan, matias);
+		redA.desConectar(matias, jorge);
+		redA.desConectar(matias, juan);
+
+		assertEquals(0, gradosDeSeparacion.maximoGradoDeSeparacion(redA));
 	}
 }
