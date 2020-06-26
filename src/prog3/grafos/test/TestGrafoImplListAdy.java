@@ -3,12 +3,11 @@ package prog3.grafos.test;
 
 import junit.framework.TestCase;
 import prog3.grafos.*;
-import prog3.grafos.utiles.Algoritmos;
-import prog3.grafos.utiles.GradosDeSeparacion;
-import prog3.grafos.utiles.Mapa;
-import prog3.grafos.utiles.Recorridos;
+import prog3.grafos.util.*;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
+
+import java.util.Arrays;
 
 
 public class TestGrafoImplListAdy extends TestCase {
@@ -423,5 +422,60 @@ public class TestGrafoImplListAdy extends TestCase {
 		redA.desConectar(matias, juan);
 
 		assertEquals(0, gradosDeSeparacion.maximoGradoDeSeparacion(redA));
+	}
+
+	public void testFloyd(){
+		Grafo<Integer> ej4 = new GrafoImplListAdy<>();
+		Vertice<Integer> v0, v1, v2, v3, v4;
+
+		v0 = new VerticeImplListAdy<>(0);
+		v1 = new VerticeImplListAdy<>(1);
+		v2 = new VerticeImplListAdy<>(2);
+		v3 = new VerticeImplListAdy<>(3);
+		v4 = new VerticeImplListAdy<>(4);
+
+		ej4.agregarVertice(v0);
+		ej4.agregarVertice(v1);
+		ej4.agregarVertice(v2);
+		ej4.agregarVertice(v3);
+		ej4.agregarVertice(v4);
+
+		ej4.conectar(v1, v0, 3);
+		ej4.conectar(v3, v0, 1);
+		ej4.conectar(v4, v0, 6);
+		ej4.conectar(v0, v2, 1);
+		ej4.conectar(v1, v3, 4);
+		ej4.conectar(v4, v1, 2);
+		ej4.conectar(v1, v2, 2);
+		ej4.conectar(v2, v3, 7);
+		ej4.conectar(v2, v4, 4);
+		ej4.conectar(v4, v3, 2);
+		ej4.conectar(v3, v4, 3);
+
+		// TODO: el grafo está construido correctamente (chequeado)
+
+		Costo[][] costos = new Floyd<Integer>().floyd(ej4);
+		for (int i=0; i < costos.length; i++){
+			for (int j=0; j < costos.length; j++){
+				System.out.println("Costo("+i+"->"+j+"): "+costos[i][j]);
+			}
+		}
+	}
+
+	public void testAntenas(){
+		int[][] M = new int[7][7];
+		M[0] = new int[]{0, 7, 2, 6, 9, -1, 8};
+		M[1] = new int[]{7, 0, -1, 3, -1, -1, -1};
+		M[2] = new int[]{2, -1, 0, -1, 6, -1, -1};
+		M[3] = new int[]{6, 3, -1, 0, -1, -1, 3};
+		M[4] = new int[]{9, -1, 6, -1, 0, 3, -1};
+		M[5] = new int[]{-1, -1, -1, -1, 3, 0, 2};
+		M[6] = new int[]{8, -1, -1, 3, -1, 2, 0};
+
+		ListaGenerica<ListaGenerica<Integer>> caminosMin = new Antenas().caminosMinimos(M);
+		caminosMin.comenzar();
+		while (!caminosMin.fin()){
+			System.out.println(caminosMin.proximo());
+		}
 	}
 }

@@ -3,8 +3,8 @@ package prog3.grafos.test;
 
 import junit.framework.TestCase;
 import prog3.grafos.*;
-import prog3.grafos.utiles.Algoritmos;
-import prog3.grafos.utiles.Mapa;
+import prog3.grafos.util.Algoritmos;
+import prog3.grafos.util.Mapa;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 

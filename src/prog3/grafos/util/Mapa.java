@@ -1,4 +1,4 @@
-package prog3.grafos.utiles;
+package prog3.grafos.util;
 
 import prog3.grafos.Arista;
 import prog3.grafos.Grafo;

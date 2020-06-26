@@ -1,6 +1,5 @@
-package prog3.grafos.utiles;
+package prog3.grafos.util;
 
-import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
