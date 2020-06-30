@@ -1,6 +1,6 @@
 package prog3.complementos;
 
-import prog3.util.Pila;
+import prog3.util.PilaGenerica;
 
 public class TestBalanceo {
 
@@ -25,7 +25,7 @@ public class TestBalanceo {
     public static boolean isStringBalanced(String str){
         if (str == null) return false;
 
-        Pila<Character> reqChars = new Pila<>();
+        PilaGenerica<Character> reqChars = new PilaGenerica<>();
         char[] openChars = new char[]{'(','[','{','¿','¡'};
         char[] closeChars = new char[]{')',']','}','?','!'};
 

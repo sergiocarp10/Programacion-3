@@ -1,7 +1,7 @@
 package prog3.arbol.binario.util;
 
 import prog3.arbol.binario.ArbolBinario;
-import prog3.util.Pila;
+import prog3.util.PilaGenerica;
 
 public class Expresion {
     private ArbolBinario<Character> arbol;
@@ -17,7 +17,7 @@ public class Expresion {
     /** Arma el arbol a partir de una expresion postfija pasada como parámetro.
      *  La cadena solo debe tener operandos y operadores (no se admiten blancos) */
     public void armarConPostfija(String exp){
-        Pila<ArbolBinario<Character>> pila = new Pila<>();
+        PilaGenerica<ArbolBinario<Character>> pila = new PilaGenerica<>();
         ArbolBinario<Character> nuevo;
 
         for (char c : exp.toCharArray()){
@@ -58,7 +58,7 @@ public class Expresion {
     /** Convierte la expresion a postfija y arma el arbol.
      * Admite blancos, exponentes y paréntesis (cerrarlos como corresponde) */
     public void armarConInfija(String exp){
-        Pila<Character> pila = new Pila<>();    // pila de signos y paréntesis
+        PilaGenerica<Character> pila = new PilaGenerica<>();    // pila de signos y paréntesis
         StringBuilder postfija = new StringBuilder();
         char aux;
 

@@ -16,11 +16,11 @@ public class Ejercicio03<T> {
 
         if (ciudad != null && !ciudad.esVacio()){
             ListaGenerica<Vertice<T>> esquinas = ciudad.listaDeVertices();
+            boolean[] visitados = new boolean[esquinas.tamanio()];
 
             esquinas.comenzar();
             while (!esquinas.fin()){
                 Vertice<T> aux = esquinas.proximo();
-                boolean[] visitados = new boolean[esquinas.tamanio()];
                 if (this.esEsqValiosa(ciudad, aux, visitados, x, y))
                     result.agregarFinal(aux.dato());
             }
@@ -34,7 +34,8 @@ public class Ejercicio03<T> {
         if (dy <= 0) return true;
 
         // caso base "malo": no debo caminar más
-        if (dx == 0) return false;
+        if (dx == 0 || visited[v.posicion()])
+            return false;
 
         // sino sigo...
         boolean cumple = false;
@@ -45,10 +46,10 @@ public class Ejercicio03<T> {
         cuadras.comenzar();
         while (!cuadras.fin() && !cumple){
             arista = cuadras.proximo();
-            if (!visited[arista.verticeDestino().posicion()])
             cumple = this.esEsqValiosa(g, arista.verticeDestino(), visited, dx-1, dy-arista.peso());
         }
 
+        visited[v.posicion()] = false;
         return cumple;
     }
 }

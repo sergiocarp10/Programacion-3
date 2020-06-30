@@ -2,7 +2,7 @@ package prog3.arbol.general.usos;
 
 import prog3.arbol.general.ArbolGeneral;
 import prog3.listagenerica.ListaGenerica;
-import prog3.util.Cola;
+import prog3.util.ColaGenerica;
 
 public class Empresa {
     private ArbolGeneral<Empleado> empleados;
@@ -11,7 +11,7 @@ public class Empresa {
     public int empleadosPorCategoria(int categoria){
         if (categoria < 1) return -1;
 
-        Cola<ArbolGeneral<Empleado>> cola = new Cola<>();
+        ColaGenerica<ArbolGeneral<Empleado>> cola = new ColaGenerica<>();
         ListaGenerica<ArbolGeneral<Empleado>> hijos;
         ArbolGeneral<Empleado> ab;
         int cant, lev;
@@ -39,7 +39,7 @@ public class Empresa {
 
 
     public int categoriaConMasEmpleados(){
-        Cola<ArbolGeneral<Empleado>> cola = new Cola<>();
+        ColaGenerica<ArbolGeneral<Empleado>> cola = new ColaGenerica<>();
         ListaGenerica<ArbolGeneral<Empleado>> hijos;
         ArbolGeneral<Empleado> ab;
         int max, ret, cant, lev = 1;

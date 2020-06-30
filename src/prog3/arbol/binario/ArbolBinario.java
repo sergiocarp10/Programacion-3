@@ -3,7 +3,7 @@ package prog3.arbol.binario;
 import parciales.Par;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
-import prog3.util.Cola;
+import prog3.util.ColaGenerica;
 
 public class ArbolBinario<T> {
 
@@ -88,7 +88,7 @@ public class ArbolBinario<T> {
 
 	// TODO: FROM PDF 4.2 - AB
 	public boolean lleno() {
-		Cola<ArbolBinario<T>> cola = new Cola<>();
+		ColaGenerica<ArbolBinario<T>> cola = new ColaGenerica<>();
 		ArbolBinario<T> ab;
 		int cantN, level;
 
@@ -120,7 +120,7 @@ public class ArbolBinario<T> {
 
 	// TODO: I THINK IT'S ALRIGHT!
 	public boolean completo(){
-		Cola<ArbolBinario<T>> cola = new Cola<>();
+		ColaGenerica<ArbolBinario<T>> cola = new ColaGenerica<>();
 		ArbolBinario<T> ab;
 		boolean onlyLeaves = false;
 
@@ -157,7 +157,7 @@ public class ArbolBinario<T> {
 	}
 
 	private int ultimoNivelCompleto(ArbolBinario<T> unArbol){
-		Cola<ArbolBinario<T>> cola = new Cola<>();
+		ColaGenerica<ArbolBinario<T>> cola = new ColaGenerica<>();
 		ArbolBinario<T> aux;
 
 		boolean elProximoNivelEsCompleto = true;

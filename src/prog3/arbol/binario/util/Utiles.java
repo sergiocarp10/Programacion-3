@@ -3,7 +3,7 @@ package prog3.arbol.binario.util;
 import prog3.arbol.binario.ArbolBinario;
 import prog3.listaenteros.ListaDeEnteros;
 import prog3.listaenteros.ListaDeEnterosEnlazada;
-import prog3.util.Cola;
+import prog3.util.ColaGenerica;
 
 public class Utiles {
 
@@ -20,7 +20,7 @@ public class Utiles {
     }
 
     public int sumaMaximaHorizontal(ArbolBinario<Integer> ab){
-        Cola<ArbolBinario<Integer>> cola = new Cola<>();
+        ColaGenerica<ArbolBinario<Integer>> cola = new ColaGenerica<>();
         ArbolBinario<Integer> aux;
         int levelSum, maxSum;
 

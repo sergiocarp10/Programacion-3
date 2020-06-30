@@ -2,15 +2,15 @@ package prog3.util;
 
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class Cola<T> extends ListaGenericaEnlazada<T> {
+public class PilaGenerica<T> extends ListaGenericaEnlazada<T>{
 
-    public Cola(){}
+    public PilaGenerica(){}
 
-    public void encolar(T elem){
-        super.agregarFinal(elem);
+    public void apilar(T elem){
+        super.agregarInicio(elem);
     }
 
-    public T desencolar(){
+    public T desapilar(){
         T result = this.tope();
         super.eliminarEn(0);
         return result;

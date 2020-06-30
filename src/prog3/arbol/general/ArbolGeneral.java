@@ -2,7 +2,7 @@ package prog3.arbol.general;
 
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
-import prog3.util.Cola;
+import prog3.util.ColaGenerica;
 
 public class ArbolGeneral<T> {
 
@@ -156,7 +156,7 @@ public class ArbolGeneral<T> {
 		if (this.esVacio()) return -1;
 		int max = 0, actWidth = 0;
 
-		Cola<ArbolGeneral<T>> cola = new Cola<>();
+		ColaGenerica<ArbolGeneral<T>> cola = new ColaGenerica<>();
 		cola.encolar(this);
 		cola.encolar(null);
 
