@@ -33,7 +33,7 @@ public class Ejercicio06_06 {
                             ListaGenerica<String> camino, boolean[] marcas, int[] min, int time, int faltan){
 
         // caso base "malo": me excedí de tiempo
-        if (time > min[0]) return;
+        if (time >= min[0]) return;
 
         // candidatos invertidos
         camino.agregarInicio(v.dato());
