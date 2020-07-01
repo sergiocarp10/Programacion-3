@@ -67,7 +67,7 @@ public class Ejercicio06_06 {
         adyacentes.comenzar();
         while (!adyacentes.fin()){
             arista = adyacentes.proximo();
-            if (!marcas[v.posicion()]){
+            if (!marcas[arista.verticeDestino().posicion()]){
                 this.rutaOptima(g, arista.verticeDestino(), caminoMin,
                         camino, marcas, min, time + arista.peso(), faltan - 1);
             }
