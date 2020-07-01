@@ -45,7 +45,7 @@ public class Parcial_2011_01 {
         if (diasRestantes == 0){
             this.copiarInvertido(caminoTemp, result);
             encontre = true;
-        } else {
+        } else if (diasRestantes > 0) {
             ListaGenerica<Arista<Ciudad>> adyacencias = grafo.listaDeAdyacentes(ciudadAct);
             Vertice<Ciudad> ciudadProx;
 

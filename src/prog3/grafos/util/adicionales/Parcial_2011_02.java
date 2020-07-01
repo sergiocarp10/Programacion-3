@@ -44,7 +44,7 @@ public class Parcial_2011_02 {
         if (diasRestantes == 0){
             if (caminoTemp.tamanio() > result.tamanio())
                 this.copiarInvertido(caminoTemp, result);
-        } else {
+        } else if (diasRestantes > 0) {
             ListaGenerica<Arista<Ciudad>> adyacencias = grafo.listaDeAdyacentes(ciudadAct);
             Vertice<Ciudad> ciudadProx;
 

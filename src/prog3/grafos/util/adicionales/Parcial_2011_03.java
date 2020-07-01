@@ -47,7 +47,7 @@ public class Parcial_2011_03 {
             if (diasRestantes == 0){
                 this.copiarInvertido(caminoTemp, result);
                 min[0] = km;
-            } else {
+            } else if (diasRestantes > 0) {
                 ListaGenerica<Arista<Ciudad>> adyacencias = grafo.listaDeAdyacentes(ciudadAct);
                 Arista<Ciudad> arista;
 
