@@ -33,7 +33,7 @@ public class Ejercicio06_06 {
             while (!cursos.fin()){
                 // disparamos dfs para cada vértice origen
                 this.rutaOptima(grafo, cursos.proximo(), result,
-                        camino, enCamino, tiempoMin, 0, cursos.tamanio());
+                        camino, enCamino, tiempoMin, 0, cursos.tamanio()-1);
             }
         }
 
