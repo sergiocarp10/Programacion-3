@@ -8,6 +8,18 @@ import prog3.listagenerica.ListaGenericaEnlazada;
 
 public class Ejercicio06_06 {
 
+    /* ENUNCIADO
+    La facultad de Ciencias Exactas tiene docentes dando clases en diferentes Facultades:
+    Informática, Química, Astronomía, Medicina, etc. María es contratada por Exactas para realizar encuestas
+    a los alumnos de las diferentes comisiones de los diferentes cursos de todas las facultades,
+    y quiere saber cuál es la ruta óptima que menos tiempo le lleve para visitar todos los
+    cursos de los diferentes edificios. Dado un grafo con vértices que representan los diferentes cursos
+    de todas las facultades, y con aristas representando cuánto cuesta llegar desde un curso
+    a otro, haga un programa en Java que le ayude a María definir en qué orden visitar los diferentes cursos
+    para que le cueste lo menos posible. Asuma que el primer curso lo puede elegir sin costo, y los cursos
+    se pueden visitar en cualquier momento
+     */
+
     public ListaGenerica<String> rutaOptima(Grafo<String> grafo){
         ListaGenerica<String> result = new ListaGenericaEnlazada<>();
 
@@ -32,7 +44,7 @@ public class Ejercicio06_06 {
     private void rutaOptima(Grafo<String> g, Vertice<String> v, ListaGenerica<String> caminoMin,
                             ListaGenerica<String> camino, boolean[] marcas, int[] min, int time, int faltan){
 
-        // caso base "malo": me excedí de tiempo
+        // caso base "malo": ya no es ruta óptima
         if (time >= min[0]) return;
 
         // candidatos invertidos
