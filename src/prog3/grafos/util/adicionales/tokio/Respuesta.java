@@ -1,4 +1,4 @@
-package prog3.grafos.util.adicionales;
+package prog3.grafos.util.adicionales.tokio;
 
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
