@@ -50,7 +50,7 @@ public class TortugasDeGalapagos {
 
     private void dfs(Vertice<Isla> v, ListaGenerica<String> listaMax, ListaGenerica<String> camino,
                      boolean[] visitados, int[] tortugasMax, int tortugasAct){
-        // acciones comunes
+        // acciones iniciales comunes
         visitados[v.posicion()] = true;
         camino.agregarInicio(v.dato().getNombre());
 
@@ -74,7 +74,7 @@ public class TortugasDeGalapagos {
                 this.dfs(islaProx, listaMax, camino, visitados, tortugasMax, tortugasAct);
         }
 
-        // acciones finales
+        // acciones finales comunes
         camino.eliminarEn(0);
         visitados[v.posicion()] = false;
     }
