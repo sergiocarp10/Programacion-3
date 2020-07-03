@@ -8,6 +8,21 @@ import prog3.listagenerica.ListaGenericaEnlazada;
 
 public class EjercicioCafes<T> {
 
+    /*
+    Es sólo una moda o vino para quedarse? No se sabe, pero como parte de un plan fuerte de
+expansión en Argentina el número de locales abiertos de una muy conocida cadena internacional de
+café ha aumentado 50% en la primera mitad de 2013 con respecto al mismo período del año 2012.
+    Al parecer las personas se han vuelto tan adictos a estas tiendas de café gourmet que los inmuebles
+que están cerca de estas cafeterías obtienen mejores rentas. Esto ha sido notado por una compañía
+de bienes raíces, que está interesada en identificar si una determinada esquina es un lugar valioso
+en términos de su proximidad al mayor números de cafés de esta cadena.
+Para ello cuentan con un mapa de la ciudad representada en un grafo donde, cada arista indica la
+cantidad de cafés. Supongamos que una persona promedio está dispuesta a caminar un número de
+cuadras fijo x para obtener su café matinal. Usted tiene que determinar si la esquina en cuestión es
+valiosa. Es considerada valiosa si el número de cafés en los que una persona puede alcanzar es
+mayor a un número fijo arbitrario y
+     */
+
     // x: cantidad máxima de cuadras que una persona está dispuesta a caminar
     // y: cantidad a superar de cafés para que la esquina sea considerada valiosa
     // la ciudad es un grafo pesado, donde cada arista es la cantidad de cafés
