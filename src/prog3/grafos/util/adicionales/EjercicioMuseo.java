@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class Ejercicio02 {
+public class EjercicioMuseo {
 
     public ListaGenerica<Sala> mejorRecorrido(Grafo<Sala> museo){
         ListaGenerica<Sala> result = new ListaGenericaEnlazada<>();

@@ -9,7 +9,7 @@ import prog3.listagenerica.ListaGenericaEnlazada;
 // observación: me disgusta el eliminarEn(tamanio-1) de la lista candidato
 // porque SIEMPRE tiene que recorrer la lista secuencialmente
 
-public class Ejercicio01 {
+public class EjercicioMafias {
 
     public ListaGenerica<Sitio> rutaMasSegura(Grafo<Sitio> ciudad){
         ListaGenerica<Sitio> result = new ListaGenericaEnlazada<>();

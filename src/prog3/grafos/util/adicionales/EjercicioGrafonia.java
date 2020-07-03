@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class Ejercicio06_03 {
+public class EjercicioGrafonia {
 
     /* ENUNCIADO
      Juan Carlos Verticio es un artista que vive en la ciudad de Grafonia, y

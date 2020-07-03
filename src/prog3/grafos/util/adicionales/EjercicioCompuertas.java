@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.util.ColaGenerica;
 
-public class Ejercicio06_05 {
+public class EjercicioCompuertas {
 
     /* ENUNCIADO
     En un circuito electrónico digital la electricidad viaja a la velocidad de la luz. Sin embargo, las

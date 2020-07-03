@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class Ejercicio03<T> {
+public class EjercicioCafes<T> {
 
     // x: cantidad máxima de cuadras que una persona está dispuesta a caminar
     // y: cantidad a superar de cafés para que la esquina sea considerada valiosa

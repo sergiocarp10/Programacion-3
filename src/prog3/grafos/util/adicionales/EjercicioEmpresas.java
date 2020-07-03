@@ -7,7 +7,7 @@ import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
 // TODO: FUNCIONARÍA BIEN, PERO ES INEFICIENTE
-public class Ejercicio04 {
+public class EjercicioEmpresas {
 
     public ListaGenerica<String> mejoresEmpresas(Grafo<String> red){
         ListaGenerica<String> result = new ListaGenericaEnlazada<>();

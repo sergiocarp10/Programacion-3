@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.util.ColaGenerica;
 
-public class Ejercicio06_04 {
+public class EjercicioVirus {
 
     /* ENUNCIADO
      Un poderoso e inteligente virus de computadora infecta cualquier computadora en 1 minuto,

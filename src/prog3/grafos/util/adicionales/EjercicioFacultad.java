@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class Ejercicio06_06 {
+public class EjercicioFacultad {
 
     /* ENUNCIADO
     La facultad de Ciencias Exactas tiene docentes dando clases en diferentes Facultades:
