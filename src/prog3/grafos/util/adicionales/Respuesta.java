@@ -5,14 +5,14 @@ import prog3.listagenerica.ListaGenericaEnlazada;
 
 public class Respuesta {
     private int distanciaMax;
-    private ListaGenerica<Estacion> listaEstaciones;
+    private ListaGenerica<String> listaEstaciones;
 
     public Respuesta() {
         this.distanciaMax = -1;
         this.listaEstaciones = new ListaGenericaEnlazada<>();
     }
 
-    public Respuesta(int distanciaMax, ListaGenerica<Estacion> listaEstaciones) {
+    public Respuesta(int distanciaMax, ListaGenerica<String> listaEstaciones) {
         this.distanciaMax = distanciaMax;
         this.listaEstaciones = listaEstaciones;
     }
@@ -25,11 +25,11 @@ public class Respuesta {
         this.distanciaMax = distanciaMax;
     }
 
-    public ListaGenerica<Estacion> getListaEstaciones() {
+    public ListaGenerica<String> getListaEstaciones() {
         return listaEstaciones;
     }
 
-    public void setListaEstaciones(ListaGenerica<Estacion> listaEstaciones) {
+    public void setListaEstaciones(ListaGenerica<String> listaEstaciones) {
         this.listaEstaciones = listaEstaciones;
     }
 }
