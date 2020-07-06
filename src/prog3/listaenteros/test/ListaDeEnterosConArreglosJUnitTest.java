@@ -1,11 +1,10 @@
 package prog3.listaenteros.test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
-
 import prog3.listaenteros.ListaDeEnterosConArreglos;
+
+import static org.junit.Assert.*;
 
 /**
  * Clase que permite testear la ListaDeEnterosConArreglos. Recordar que la
@@ -71,20 +70,20 @@ public class ListaDeEnterosConArreglosJUnitTest {
 		assertEquals(new Integer(3), l.elemento(0));
 		assertEquals(1, l.tamanio());
 
-		// Test de agregarEn al principio cuando hay algo
+		// prog3.arbol.Test de agregarEn al principio cuando hay algo
 		assertTrue(l.agregarEn(1, 0));
 		assertEquals(new Integer(1), l.elemento(0));
 		assertEquals(new Integer(3), l.elemento(1));
 		assertEquals(2, l.tamanio());
 
-		// Test de agregarEn entremedio
+		// prog3.arbol.Test de agregarEn entremedio
 		assertTrue(l.agregarEn(2, 1));
 		assertEquals(new Integer(1), l.elemento(0));
 		assertEquals(new Integer(2), l.elemento(1));
 		assertEquals(new Integer(3), l.elemento(2));
 		assertEquals(3, l.tamanio());
 
-		// Test de agregarEn al final
+		// prog3.arbol.Test de agregarEn al final
 		assertTrue(l.agregarEn(4, 3));
 		assertEquals(new Integer(1), l.elemento(0));
 		assertEquals(new Integer(2), l.elemento(1));
@@ -105,11 +104,11 @@ public class ListaDeEnterosConArreglosJUnitTest {
 		for (int i = 1; i <= 10; i++)
 			l.agregarEn(i, i - 1);
 
-		// Test eliminar el primer elemento cuando hay mas
+		// prog3.arbol.Test eliminar el primer elemento cuando hay mas
 		assertTrue(l.eliminarEn(0));
 		assertEquals(new Integer(2), l.elemento(0));
 
-		// Test eliminar un elemento del medio (el que esta en la posicion 3)
+		// prog3.arbol.Test eliminar un elemento del medio (el que esta en la posicion 3)
 		assertTrue(l.eliminarEn(3));
 		assertEquals(new Integer(9), l.elemento(l.tamanio() - 1));
 		assertEquals(8, l.tamanio());
@@ -134,12 +133,12 @@ public class ListaDeEnterosConArreglosJUnitTest {
 		// No se tiene que poder encontrar algo cuando la lista esta vacia
 		assertFalse(l.incluye(1));
 
-		// Test de busqueda sobre el primer elemento
+		// prog3.arbol.Test de busqueda sobre el primer elemento
 		l.agregarEn(1, 0);
 		assertTrue(l.incluye(1));
 		assertFalse(l.incluye(2));
 
-		// Test con mas elementos
+		// prog3.arbol.Test con mas elementos
 		l.agregarEn(2, 1);
 		l.agregarEn(3, 2);
 		assertTrue(l.incluye(2));
@@ -148,7 +147,7 @@ public class ListaDeEnterosConArreglosJUnitTest {
 
 	@Test
 	public void testAgregarFinal() {
-		// Test de agregarEn al principio cuando no hay nada
+		// prog3.arbol.Test de agregarEn al principio cuando no hay nada
 		assertTrue(l.agregarFinal(1));
 		assertEquals(1, l.tamanio());
 		assertTrue(l.agregarFinal(2));
@@ -159,7 +158,7 @@ public class ListaDeEnterosConArreglosJUnitTest {
 
 	@Test
 	public void testAgregarInicio() {
-		// Test de agregarEn al principio cuando no hay nada
+		// prog3.arbol.Test de agregarEn al principio cuando no hay nada
 		assertTrue(l.agregarInicio(3));
 		assertEquals(1, l.tamanio());
 		assertTrue(l.agregarInicio(2));

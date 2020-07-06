@@ -6,7 +6,7 @@ import prog3.grafos.Vertice;
 import prog3.listagenerica.ListaGenerica;
 import prog3.listagenerica.ListaGenericaEnlazada;
 
-public class EjercicioCafes<T> {
+public class EjercicioCafes_DFS<T> {
 
     /*
     Es sólo una moda o vino para quedarse? No se sabe, pero como parte de un plan fuerte de

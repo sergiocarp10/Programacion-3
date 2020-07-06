@@ -1,3 +1,5 @@
+package prog3.arbol;
+
 import prog3.arbol.general.ArbolGeneral;
 
 public class Test {
